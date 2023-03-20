@@ -1,0 +1,61 @@
+.card {
+  display: block;
+  top: 80px;
+  margin: 0 auto;
+  padding: 130px;
+  width: 1188px;
+  border-radius: 3200px;
+  border-width: 20px;
+  border-color: #d1f4fa;
+  font-family: "Tilt Neon", cursive;
+}
+
+.day {
+  word-spacing: 3px;
+  font-size: 25px;
+  left: 14px;
+  color: #005792;
+  margin: 30px;
+}
+.btn {
+  background: #ffe6eb;
+  border-radius: 20px;
+}
+.btn-geo {
+  border-color: transparent;
+  border-radius: 20px;
+  background: #ffe6eb;
+}
+
+.location-icon {
+  color: #005792;
+}
+.icon {
+  font-size: 45px;
+  color: #d1f4fa;
+}
+.today {
+  text-align: center;
+  margin: 30px;
+}
+.city {
+  font-size: 34px;
+}
+
+.icon-today {
+  font-size: 45px;
+}
+
+.search {
+  left: 30px;
+  margin: 30px;
+}
+
+.temp-today {
+  font-size: 34px;
+}
+
+a {
+  text-decoration: none;
+  color: #005792;
+}
