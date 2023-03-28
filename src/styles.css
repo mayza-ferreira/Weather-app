@@ -65,3 +65,7 @@ a {
   margin: 160px 50px 0px;
   font-family: "Tilt Neon", cursive;
 }
+
+.weather-description {
+  text-transform: capitalize;
+}

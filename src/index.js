@@ -28,10 +28,12 @@ function searchLocation(event) {
 
 function displayWeather(response) {
   let currentCity = document.querySelector(`#current-city`);
-  currentCity.innerHTML = response.data.name;
   let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector(`#current-temp`);
+  let descriptionElement = document.querySelector(`#description`);
+  currentCity.innerHTML = response.data.name;
   temp.innerHTML = `${temperature}° `;
+  descriptionElement.innerHTML = response.data.weather[0].description;
 }
 
 function retrievePosition(position) {
