@@ -3,7 +3,7 @@
   top: 80px;
   margin: 0 auto;
   padding: 130px;
-  width: 1188px;
+  width: 1190px;
   border-radius: 3200px;
   border-width: 20px;
   border-color: #d1f4fa;
@@ -68,4 +68,11 @@ a {
 
 .weather-description {
   text-transform: capitalize;
+}
+
+ul {
+  list-style-type: none;
+}
+li {
+  margin-right: 25px;
 }

@@ -59,7 +59,8 @@
                 <button type="button " class="btn" id="btn-search">
                   <i
                     class="fa-solid fa-magnifying-glass-location location-icon"
-                  ></i>
+                  >
+                  </i>
                 </button>
               </div>
 
@@ -69,12 +70,17 @@
 
                 <i class="m-3 fa-solid fa-cloud-sun-rain icon-today"></i>
                 <div class="weather-description" id="description"></div>
+                <ul class="weather-description">
+                  <li>Wind: <span id="wind"></span> km/h</li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                </ul>
                 <div class="temp-today m-3">
-                  <span id="current-temp"> 26° </span
-                  ><a href="#" id="celsius">C</a>/<a href="#" id="fahrenheit"
-                    >F</a
-                  >
+                  <span id="current-temp"> 26° </span>
+                  <a href="#" id="celsius">C</a>/<a href="#" id="fahrenheit">
+                    F
+                  </a>
                 </div>
+
                 <div class="geolocation">
                   <button type="button " class="btn-geo" id="btn-geo">
                     <i class="fa-solid fa-location-dot location-icon p-1"></i>
@@ -88,9 +94,10 @@
     </div>
     <div class="footer">
       <footer>
-        <a href="https://github.com/mayza-ferreira/Weather-app"
-          >Open-source coded </a
-        >by Mayza Ferreira
+        <a href="https://github.com/mayza-ferreira/Weather-app">
+          Open-source coded
+        </a>
+        by Mayza Ferreira
       </footer>
     </div>
     <script src="src/index.js"></script>

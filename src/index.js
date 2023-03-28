@@ -31,9 +31,13 @@ function displayWeather(response) {
   let temperature = Math.round(response.data.main.temp);
   let temp = document.querySelector(`#current-temp`);
   let descriptionElement = document.querySelector(`#description`);
+  let humidityElement = document.querySelector(`#humidity`);
+  let windElement = document.querySelector(`#wind`);
   currentCity.innerHTML = response.data.name;
   temp.innerHTML = `${temperature}° `;
   descriptionElement.innerHTML = response.data.weather[0].description;
+  humidityElement.innerHTML = response.data.main.humidity;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
 }
 
 function retrievePosition(position) {
