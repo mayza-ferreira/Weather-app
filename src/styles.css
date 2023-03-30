@@ -15,7 +15,13 @@
   font-size: 25px;
   left: 14px;
   color: #005792;
-  margin: 30px;
+  margin: 25px;
+  margin-bottom: 0px;
+}
+.forecast-temp {
+  font-size: 14px;
+  text-align: center;
+  color: #005792;
 }
 .btn {
   background: #ffe6eb;

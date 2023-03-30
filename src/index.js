@@ -13,9 +13,12 @@ let days = [
 
 let now = new Date();
 let todayDate = document.querySelector(`#date-today`);
-todayDate.innerHTML = `${
-  days[now.getDay()]
-} / ${now.getHours()}:${now.getMinutes()}`;
+let hours = now.getHours();
+let minutes = now.getMinutes();
+if (minutes < 10) {
+  minutes = `0${minutes}`;
+}
+todayDate.innerHTML = `${days[now.getDay()]} / ${hours}:${minutes}`;
 
 function searchLocation(event) {
   event.preventDefault();
@@ -23,7 +26,6 @@ function searchLocation(event) {
   let units = "metric";
   let apiUrl = `${apiEndPoint}q=${newCity.value}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeather);
-  console.log(apiUrl);
 }
 
 function displayWeather(response) {
@@ -33,11 +35,17 @@ function displayWeather(response) {
   let descriptionElement = document.querySelector(`#description`);
   let humidityElement = document.querySelector(`#humidity`);
   let windElement = document.querySelector(`#wind`);
+  let celsiusElement = document.querySelector(`#celsius`);
+  let unitsSeparator = document.querySelector(`#units-separator`);
+  let fahrenheitElement = document.querySelector(`#fahrenheit`);
+  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
   currentCity.innerHTML = response.data.name;
   temp.innerHTML = `${temperature}° `;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = response.data.main.humidity;
-  windElement.innerHTML = Math.round(response.data.wind.speed);
+  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
+  celsiusElement.innerHTML = `C`;
+  unitsSeparator.innerHTML = `/`;
+  fahrenheitElement.innerHTML = `F`;
 }
 
 function retrievePosition(position) {

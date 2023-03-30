@@ -32,18 +32,30 @@
           <div class="row">
             <div class="col-4">
               <div class="day">
-                <i class="fa-solid fa-cloud icon"></i> Monday
+                <i class="fa-solid fa-cloud icon"></i>
+                Monday
               </div>
+              <div class="forecast-temp"></div>
               <div class="day">
-                <i class="fa-solid fa-cloud-bolt icon"></i> Tuesday
+                <i class="fa-solid fa-cloud-bolt icon"></i>
+                Tuesday
               </div>
+              <div class="forecast-temp"></div>
               <div class="day">
-                <i class="fa-solid fa-cloud-showers-heavy icon"></i> Wednesday
+                <i class="fa-solid fa-cloud-showers-heavy icon"></i>
+                Wednesday
               </div>
+              <div class="forecast-temp"></div>
               <div class="day">
-                <i class="fa-solid fa-wind icon"></i> Thursday
+                <i class="fa-solid fa-wind icon"></i>
+                Thursday
               </div>
-              <div class="day"><i class="fa-solid fa-sun icon"></i> Friday</div>
+              <div class="forecast-temp"></div>
+              <div class="day">
+                <i class="fa-solid fa-sun icon"></i>
+                Friday
+              </div>
+              <div class="forecast-temp"></div>
             </div>
 
             <div class="col-8">
@@ -56,7 +68,7 @@
                     class="form-control rounded-end-0 rounded-start-5"
                   />
                 </div>
-                <button type="button " class="btn" id="btn-search">
+                <button type="button" class="btn" id="btn-search">
                   <i
                     class="fa-solid fa-magnifying-glass-location location-icon"
                   >
@@ -65,19 +77,27 @@
               </div>
 
               <div class="today">
-                <div class="data m-3" id="date-today">Sunday / 13:34</div>
-                <div class="city m-3" id="current-city">Montevideo</div>
+                <div class="data m-3" id="date-today"></div>
+                <div class="city m-3" id="current-city"></div>
 
-                <i class="m-3 fa-solid fa-cloud-sun-rain icon-today"></i>
+                <!-- <i class="m-3 fa-solid fa-cloud-sun-rain icon-today"></i>-->
                 <div class="weather-description" id="description"></div>
                 <ul class="weather-description">
-                  <li>Wind: <span id="wind"></span> km/h</li>
-                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>
+                    <span id="wind"></span>
+                  </li>
+                  <li>
+                    <span id="humidity"></span>
+                  </li>
                 </ul>
                 <div class="temp-today m-3">
-                  <span id="current-temp"> 26° </span>
-                  <a href="#" id="celsius">C</a>/<a href="#" id="fahrenheit">
-                    F
+                  <span id="current-temp"> </span>
+                  <a href="#" id="celsius">
+                    <!--C-->
+                  </a>
+                  <span id="units-separator"><!--/--></span>
+                  <a href="#" id="fahrenheit">
+                    <!-- F-->
                   </a>
                 </div>
 
