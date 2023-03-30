@@ -39,6 +39,7 @@ function displayWeather(response) {
   let unitsSeparator = document.querySelector(`#units-separator`);
   let fahrenheitElement = document.querySelector(`#fahrenheit`);
   windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  let iconElement = document.querySelector(`#icon-today`);
   currentCity.innerHTML = response.data.name;
   temp.innerHTML = `${temperature}° `;
   descriptionElement.innerHTML = response.data.weather[0].description;
@@ -46,6 +47,11 @@ function displayWeather(response) {
   celsiusElement.innerHTML = `C`;
   unitsSeparator.innerHTML = `/`;
   fahrenheitElement.innerHTML = `F`;
+  iconElement.setAttribute(
+    `src`,
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute(`alt`, response.data.weather[0].description);
 }
 
 function retrievePosition(position) {
