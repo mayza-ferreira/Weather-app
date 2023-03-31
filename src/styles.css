@@ -6,40 +6,24 @@
   width: 1190px;
   border-radius: 3200px;
   border-width: 20px;
-  border-color: #d1f4fa;
+  border-color: #d5c6e0;
   font-family: "Tilt Neon", cursive;
 }
 
-.day {
-  word-spacing: 3px;
-  font-size: 25px;
-  left: 14px;
-  color: #005792;
-  margin: 25px;
-  margin-bottom: 0px;
-}
-.forecast-temp {
-  font-size: 14px;
-  text-align: center;
-  color: #005792;
-}
 .btn {
-  background: #ffe6eb;
+  background: #f5e6e8;
   border-radius: 20px;
 }
 .btn-geo {
   border-color: transparent;
   border-radius: 20px;
-  background: #ffe6eb;
+  background: #f5e6e8;
 }
 
 .location-icon {
-  color: #005792;
+  color: #967aa1;
 }
-.icon {
-  font-size: 45px;
-  color: #d1f4fa;
-}
+
 .today {
   text-align: center;
   margin: 30px;
@@ -49,7 +33,7 @@
 }
 
 .search {
-  left: 30px;
+  left: 105px;
   margin: 30px;
 }
 
@@ -59,7 +43,7 @@
 
 a {
   text-decoration: none;
-  color: #005792;
+  color: #967aa1;
 }
 
 .footer {
