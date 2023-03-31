@@ -19,12 +19,15 @@ if (minutes < 10) {
   minutes = `0${minutes}`;
 }
 todayDate.innerHTML = `${days[now.getDay()]} / ${hours}:${minutes}`;
-
-function searchLocation(event) {
+function handleSubmit(event) {
   event.preventDefault();
-  let newCity = document.querySelector(`#form1`);
+  let newCity = document.querySelector(`#form1`).value;
+  searchLocation(newCity);
+}
+
+function searchLocation(city) {
   let units = "metric";
-  let apiUrl = `${apiEndPoint}q=${newCity.value}&appid=${apiKey}&units=${units}`;
+  let apiUrl = `${apiEndPoint}q=${city}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeather);
 }
 
@@ -81,12 +84,12 @@ function displayCelsiusTemp(event) {
 let temperature = null;
 
 let btnSearch = document.querySelector(`#btn-search`);
-btnSearch.addEventListener(`click`, searchLocation);
+btnSearch.addEventListener(`click`, handleSubmit);
 
 let search = document.querySelector(`#form1`);
 search.addEventListener(`keyup`, function (event) {
   if (event.keyCode === 13) {
-    searchLocation(event);
+    handleSubmit(event);
   }
 });
 
@@ -98,3 +101,5 @@ fahrenheitLink.addEventListener(`click`, displayFharenheitTemp);
 
 let celsiusLink = document.querySelector(`#celsius`);
 celsiusLink.addEventListener(`click`, displayCelsiusTemp);
+
+searchLocation(`Lisbon`);
