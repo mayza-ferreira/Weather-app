@@ -83,6 +83,13 @@ let temperature = null;
 let btnSearch = document.querySelector(`#btn-search`);
 btnSearch.addEventListener(`click`, searchLocation);
 
+let search = document.querySelector(`#form1`);
+search.addEventListener(`keyup`, function (event) {
+  if (event.keyCode === 13) {
+    searchLocation(event);
+  }
+});
+
 let btnGeolocation = document.querySelector(`#btn-geo`);
 btnGeolocation.addEventListener(`click`, getLocation);
 
