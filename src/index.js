@@ -38,19 +38,14 @@ function displayWeather(response) {
   let descriptionElement = document.querySelector(`#description`);
   let humidityElement = document.querySelector(`#humidity`);
   let windElement = document.querySelector(`#wind`);
-  let celsiusElement = document.querySelector(`#celsius`);
-  let unitsSeparator = document.querySelector(`#units-separator`);
-  let fahrenheitElement = document.querySelector(`#fahrenheit`);
   let iconElement = document.querySelector(`#icon-today`);
   temperature = Math.round(response.data.main.temp);
-  windElement.innerHTML = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  windElement.innerHTML = Math.round(response.data.wind.speed);
   currentCity.innerHTML = response.data.name;
   temp.innerHTML = `${temperature}° `;
   descriptionElement.innerHTML = response.data.weather[0].description;
-  humidityElement.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  celsiusElement.innerHTML = `C`;
-  unitsSeparator.innerHTML = `|`;
-  fahrenheitElement.innerHTML = `F`;
+  humidityElement.innerHTML = response.data.main.humidity;
+
   iconElement.setAttribute(
     `src`,
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
