@@ -1,31 +1,45 @@
+body {
+  background-color: rgb(245, 230, 232, 0.009);
+}
 .card {
   display: block;
   top: 80px;
   margin: 0 auto;
-  padding: 120px;
-  width: 1190px;
+  padding: 80px;
+  width: 1270px;
   border-radius: 3200px;
-  border-width: 20px;
+  border-width: 13px;
   border-color: #d5c6e0;
   font-family: "Tilt Neon", cursive;
 }
-.forecast-temp {
-  font-size: 14px;
-  text-align: center;
+
+#icon-forecast {
+  margin: 0px;
+  position: relative;
+  top: -8px;
 }
-#forecast-temp-max {
+.forecast-temp {
+  display: block;
+  position: relative;
+  top: -25px;
+  left: -18px;
+  font-size: 15px;
+  text-align: center;
   color: #d5c6e0;
 }
+
 #forecast-temp-min {
-  color: #f5e6e8;
+  opacity: 0.7;
 }
 #forecast-day {
   word-spacing: 3px;
   font-size: 25px;
-  left: 14px;
+  position: relative;
+  left: 70px;
   color: #192a51;
   margin: 25px;
   margin-bottom: 0px;
+  margin-top: 0px;
 }
 
 .icon-forecast {
@@ -33,6 +47,10 @@
   color: #d1f4fa;
 }
 
+#weather-search {
+  position: relative;
+  bottom: -50px;
+}
 .btn {
   background: #f5e6e8;
   border-radius: 20px;
@@ -43,7 +61,7 @@
 }
 
 .search {
-  left: 30px;
+  left: 65px;
   margin: 30px;
 }
 
