@@ -12,12 +12,14 @@
 .forecast-temp {
   font-size: 14px;
   text-align: center;
+}
+#forecast-temp-max {
   color: #d5c6e0;
 }
-.forecast-min-temp {
+#forecast-temp-min {
   color: #f5e6e8;
 }
-.day {
+#forecast-day {
   word-spacing: 3px;
   font-size: 25px;
   left: 14px;
