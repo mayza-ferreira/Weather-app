@@ -24,24 +24,38 @@ function handleSubmit(event) {
   let newCity = document.querySelector(`#form1`).value;
   searchLocation(newCity);
 }
+function formatDate(timestamp) {
+  let date = new Date(timestamp * 1000);
+  let day = date.getDay();
+  return days[day];
+}
 
 function displayForecast(response) {
   let forecastElement = document.querySelector(`#forecast`);
   let forecastHTML = ``;
-  days.forEach(function (day) {
-    forecastHTML =
-      forecastHTML +
-      `<img
-                  src="http://openweathermap.org/img/wn/01n@2x.png"
+  let forecastDays = response.data.daily;
+  forecastDays.forEach(function (day, index) {
+    if (index < 5) {
+      forecastHTML =
+        forecastHTML +
+        `<img
+                  src="http://openweathermap.org/img/wn/${
+                    day.weather[0].icon
+                  }@2x.png"
                   alt=""
                   id="icon-forecast"
                 />
 
-                <span id="forecast-day">${day}</span>
+                <span id="forecast-day">${formatDate(day.dt)}</span>
                 <div class="forecast-temp">
-                  <span id="forecast-temp-max">45°</span>
-                  <span id="forecast-temp-min">15°</span>
+                  <span id="forecast-temp-max">${Math.round(
+                    day.temp.max
+                  )}°</span>
+                  <span id="forecast-temp-min">${Math.round(
+                    day.temp.min
+                  )}°</span>
                 </div>`;
+    }
   });
 
   forecastElement.innerHTML = forecastHTML;
