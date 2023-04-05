@@ -87,7 +87,7 @@ function displayWeather(response) {
   temperature = Math.round(response.data.main.temp);
   windElement.innerHTML = Math.round(response.data.wind.speed);
   currentCity.innerHTML = response.data.name;
-  temp.innerHTML = `${temperature}° `;
+  temp.innerHTML = `${temperature} `;
   descriptionElement.innerHTML = response.data.weather[0].description;
   humidityElement.innerHTML = response.data.main.humidity;
 
@@ -111,20 +111,6 @@ function getLocation() {
   navigator.geolocation.getCurrentPosition(retrievePosition);
 }
 
-function displayFharenheitTemp(event) {
-  event.preventDefault();
-  let fahrenTemp = (temperature * 9) / 5 + 32;
-  let temp = document.querySelector(`#current-temp`);
-  temp.innerHTML = `${Math.round(fahrenTemp)}° `;
-}
-function displayCelsiusTemp(event) {
-  event.preventDefault();
-  let temp = document.querySelector(`#current-temp`);
-  temp.innerHTML = `${temperature}° `;
-}
-
-let temperature = null;
-
 let btnSearch = document.querySelector(`#btn-search`);
 btnSearch.addEventListener(`click`, handleSubmit);
 
@@ -137,11 +123,5 @@ search.addEventListener(`keyup`, function (event) {
 
 let btnGeolocation = document.querySelector(`#btn-geo`);
 btnGeolocation.addEventListener(`click`, getLocation);
-
-let fahrenheitLink = document.querySelector(`#fahrenheit`);
-fahrenheitLink.addEventListener(`click`, displayFharenheitTemp);
-
-let celsiusLink = document.querySelector(`#celsius`);
-celsiusLink.addEventListener(`click`, displayCelsiusTemp);
 
 searchLocation(`Lisbon`);
