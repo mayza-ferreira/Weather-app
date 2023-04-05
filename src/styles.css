@@ -5,14 +5,18 @@ body {
   display: block;
   top: 80px;
   margin: 0 auto;
-  padding: 80px;
+  padding: 70px;
   width: 1270px;
   border-radius: 3200px;
   border-width: 13px;
   border-color: #d5c6e0;
   font-family: "Tilt Neon", cursive;
 }
-
+#forecast {
+  display: block;
+  position: relative;
+  left: 50px;
+}
 #icon-forecast {
   margin: 0px;
   position: relative;
@@ -67,7 +71,7 @@ body {
 }
 
 #date-today {
-  color: #967aa1;
+  color: #d5c6e0;
 }
 
 .today {
@@ -83,6 +87,7 @@ body {
 
 .weather-description {
   text-transform: capitalize;
+  color: #d5c6e0;
 }
 
 ul {
