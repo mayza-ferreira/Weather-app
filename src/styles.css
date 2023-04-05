@@ -16,13 +16,14 @@ body {
 #icon-forecast {
   margin: 0px;
   position: relative;
+  left: 70px;
   top: -8px;
 }
 .forecast-temp {
   display: block;
   position: relative;
   top: -25px;
-  left: -18px;
+  left: -48px;
   font-size: 15px;
   text-align: center;
   color: #d5c6e0;

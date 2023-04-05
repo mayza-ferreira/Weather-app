@@ -25,6 +25,28 @@ function handleSubmit(event) {
   searchLocation(newCity);
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector(`#forecast`);
+  let forecastHTML = ``;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<img
+                  src="http://openweathermap.org/img/wn/01n@2x.png"
+                  alt=""
+                  id="icon-forecast"
+                />
+
+                <span id="forecast-day">${day}</span>
+                <div class="forecast-temp">
+                  <span id="forecast-temp-max">45°</span>
+                  <span id="forecast-temp-min">15°</span>
+                </div>`;
+  });
+
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function searchLocation(city) {
   let units = "metric";
   let apiUrl = `${apiEndPoint}q=${city}&appid=${apiKey}&units=${units}`;
@@ -98,3 +120,4 @@ let celsiusLink = document.querySelector(`#celsius`);
 celsiusLink.addEventListener(`click`, displayCelsiusTemp);
 
 searchLocation(`Lisbon`);
+displayForecast();
