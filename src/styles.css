@@ -1,9 +1,7 @@
 :root {
-  --primary-color: #e0ffcd;
-  --secondary-color: #fdffcd;
-  --third-color: #ffebbb;
-  --fourth-color: #ffcab0;
-  --fifth-color: #3b2c1b;
+  --primary-color: #d8ada0;
+  --secondary-color: #ffffff;
+  --third-color: #212529;
 }
 
 .card {
@@ -14,7 +12,7 @@
   width: 1270px;
   border-radius: 3200px;
   border-width: 13px;
-  border-color: var(--third-color);
+  border-color: var(--primary-color);
   font-family: "Tilt Neon", cursive;
 }
 #forecast {
@@ -35,7 +33,7 @@
   left: -48px;
   font-size: 15px;
   text-align: center;
-  color: var(--fourth-color);
+  color: var(--primary-color);
 }
 
 #forecast-temp-min {
@@ -46,7 +44,7 @@
   font-size: 25px;
   position: relative;
   left: 70px;
-  color: var(--fifth-color);
+
   margin: 25px;
   margin-bottom: 0px;
   margin-top: 0px;
@@ -62,7 +60,7 @@
   bottom: -50px;
 }
 .btn {
-  background: var(--fourth-color);
+  background: var(--primary-color);
   opacity: 0.6;
   border-radius: 20px;
 }
@@ -77,24 +75,26 @@
 }
 
 #date-today {
-  color: var(--fourth-color);
   opacity: 0.7;
 }
-
+.city,
+.today,
+#date-today,
+#forecast-day {
+  color: var(--third-color);
+}
 .today {
   text-align: center;
   margin: 30px;
-  color: var(--fifth-color);
 }
 
 .city {
   font-size: 34px;
-  color: var(--fifth-color);
 }
 
 .weather-description {
   text-transform: capitalize;
-  color: var(--fourth-color);
+  color: var(--primary-color);
   opacity: 0.7;
 }
 
@@ -111,13 +111,13 @@ li {
 
 a {
   text-decoration: none;
-  color: var(--third-color);
+  color: var(--primary-color);
 }
 
 .btn-geo {
   border-color: transparent;
   border-radius: 20px;
-  background: var(--fourth-color);
+  background: var(--primary-color);
   opacity: 0.6;
 }
 
