@@ -20,12 +20,7 @@
   position: relative;
   left: 50px;
 }
-#icon-forecast {
-  margin: 0px;
-  position: relative;
-  left: 70px;
-  top: -8px;
-}
+
 .forecast-temp {
   display: block;
   position: relative;
