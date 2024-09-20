@@ -33,9 +33,9 @@ function formatDate(timestamp) {
 function displayForecast(response) {
   let forecastElement = document.querySelector(`#forecast`);
   let forecastHTML = ``;
-  let forecastDays = response.data.daily;
+  let forecastDays = response.data.list;
   forecastDays.forEach(function (day, index) {
-    if (index < 5) {
+    if (index % 8 === 0) {
       forecastHTML =
         forecastHTML +
         `<img
@@ -49,10 +49,10 @@ function displayForecast(response) {
                 <span id="forecast-day">${formatDate(day.dt)}</span>
                 <div class="forecast-temp">
                   <span id="forecast-temp-max">${Math.round(
-                    day.temp.max
+                    day.main.temp_max
                   )}°</span>
                   <span id="forecast-temp-min">${Math.round(
-                    day.temp.min
+                    day.main.temp_min
                   )}°</span>
                 </div>`;
     }
@@ -70,7 +70,7 @@ function searchLocation(city) {
 function getForecast(coordinates) {
   let lat = coordinates.lat;
   let lon = coordinates.lon;
-  let urlEndPoint = `https://api.openweathermap.org/data/2.5/onecall?`;
+  let urlEndPoint = `https://api.openweathermap.org/data/2.5/forecast?`;
   let apiUrl = `${urlEndPoint}lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
