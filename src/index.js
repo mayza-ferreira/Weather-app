@@ -1,4 +1,4 @@
-let apiKey = `7784a4cd4aa2e0c25ead7bd96d585b8a`;
+let apiKey = `f58b9554b763230c723fff0bf8a35b88`;
 let apiEndPoint = `https://api.openweathermap.org/data/2.5/weather?`;
 
 let days = [
