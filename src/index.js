@@ -38,14 +38,16 @@ function displayForecast(response) {
     if (index % 8 === 0) {
       forecastHTML =
         forecastHTML +
-        `<img
+        `
+        <div class="forecast-info">
+        <img
                   src="http://openweathermap.org/img/wn/${
                     day.weather[0].icon
                   }@2x.png"
                   alt=""
                   id="icon-forecast"
                 />
-
+<div class="forecast-day-info">
                 <span id="forecast-day">${formatDate(day.dt)}</span>
                 <div class="forecast-temp">
                   <span id="forecast-temp-max">${Math.round(
@@ -53,8 +55,8 @@ function displayForecast(response) {
                   )}°</span>
                   <span id="forecast-temp-min">${Math.round(
                     day.main.temp_min
-                  )}°</span>
-                </div>`;
+                  )}°</span></div>
+                </div></div>`;
     }
   });
 

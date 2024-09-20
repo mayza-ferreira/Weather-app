@@ -3,31 +3,36 @@
   --secondary-color: #ffffff;
   --third-color: #212529;
 }
-
+html,
+body {
+  min-height: 100vh;
+}
 .card {
   display: block;
-  top: 80px;
   margin: 0 auto;
-  padding: 70px;
-  width: 1270px;
-  border-radius: 3200px;
+  padding: 60px;
+  max-width: 100%;
+  top: 80px;
+  width: 90%;
+  border-radius: 3000px;
   border-width: 13px;
   border-color: var(--primary-color);
   font-family: "Tilt Neon", cursive;
 }
 #forecast {
   display: block;
-  position: relative;
-  left: 50px;
+  margin-left: 50px;
 }
-
-.forecast-temp {
-  display: block;
-  position: relative;
-  top: -25px;
-  left: -48px;
+.forecast-info {
+  display: flex;
+  flex-direction: row;
+}
+.forecast-day-info {
+  display: flex;
+  flex-direction: column;
   font-size: 15px;
-  text-align: center;
+  justify-content: center;
+  align-items: center;
   color: var(--primary-color);
 }
 
@@ -37,22 +42,18 @@
 #forecast-day {
   word-spacing: 3px;
   font-size: 25px;
-  position: relative;
-  left: 70px;
+  text-align: center;
 
-  margin: 25px;
-  margin-bottom: 0px;
-  margin-top: 0px;
   opacity: 0.9;
 }
 
 .icon-forecast {
   font-size: 45px;
+  display: flex;
 }
 
 #weather-search {
-  position: relative;
-  bottom: -50px;
+  margin-top: 20px;
 }
 .btn {
   background: var(--primary-color);
